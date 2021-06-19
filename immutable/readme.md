@@ -4,12 +4,13 @@
 
 ## Concepts and Key ides
 
-- Functional programming -> pure function
-- Immutable data cannot be changed once created
+- Functional programming -> pure function -> data-in & data-out
+- Immutable data can't be changed once created
 - As a performance optimization Immutable.js attempts to return the existing collection when an operation would result in an identical collection
 
 ```ts
 const { Map } = require('immubtable')
 const map1 = Map({ a: 1, b: 2 })
 const map2 = map1.set('b', 2)
+console.log(map1 === map2) // true
 ```
